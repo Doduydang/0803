@@ -32,5 +32,13 @@ const publicRoutes=[
         path: '/auth/signin',
         loader: ()=> import('view/auth/SigninPage'),
     },
+    {
+        path: '/auth/signup',
+        loader: () => import('view/auth/SignupPage'),
+      },
+      {
+        path: '/auth/forgot-password',
+        loader: () => import('view/auth/ForgotPasswordPage'),
+      },
 
 ]
