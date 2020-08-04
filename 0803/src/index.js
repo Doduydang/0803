@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {LocaleProvider} from 'antd'
+
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+<LocaleProvider>
+  <App/>
+</LocaleProvider>
+  ,
   document.getElementById('root')
 );
 

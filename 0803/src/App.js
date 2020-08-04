@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
+import 'antd/dist/antd.css';
+
+import {ConnectedRouter} from 'connected-react-router';
 import RoutesComponent from './view/shared/routes/RoutesComponent'
-function App() {
+import {LocaleProvider} from 'antd';
+import {Provider} from 'react-redux';
+import {getAntdLanguage} from 'i18n';
+
+ class App extends Component {
+  render(){
   return (
-    <div >
-        <h1>hello people, nihaoma</h1>
-        <RoutesComponent/>
-    </div>
+    <LocaleProvider locale={getAntdLanguage}>
+    <Provider>
+    <ConnectedRouter>
+      <RoutesComponent/>
+      </ConnectedRouter>
+    </Provider>
+  </LocaleProvider>
   );
 }
-
+ }
 export default App;

@@ -8,4 +8,4 @@ class ForgotPasswordPage extends Component{
         )
     }
 }
-export default Forgot Password Page;
+export default ForgotPasswordPage;
